@@ -1,6 +1,8 @@
 # React Projects
 
 -   This course is with John Smilga and he goes over how to make different components
+-   https://react-projects.netlify.app/
+-   https://github.com/john-smilga/react-projects
 -   He has a link to all the working, deployed components
     -   During the course, I always tried to build it out myself first, at least a working skeleton
 -   #### Support
