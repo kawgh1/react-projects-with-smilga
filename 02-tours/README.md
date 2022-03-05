@@ -1,5 +1,7 @@
 ## React Projects Starter APP
 
+-   pulls an array of travel tours from an API and display them as Component Cards
+
 ### This was the only thing I didn't understand
 
         File: Tours.js
