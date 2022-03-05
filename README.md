@@ -20,13 +20,13 @@
 
     -   #### useState
 
-        -   1. Birthday Reminder
+        -   1. Birthday Reminder - generate simple list of Person Card Components
 
     -   #### useEffect and Conditional Rendering
 
-        -   2. Tours
-        -   3. Reviews
-        -   4. Questions
+        -   2. Tours - pull tours from travel tour API, display as Card Components
+        -   3. Reviews - People Card Components, back, forward, random Person
+        -   4. Questions - Div of Question Components - Accordion dropdown answer
         -   5. Menu
         -   6. Tabs
         -   7. Slider
