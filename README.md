@@ -32,14 +32,21 @@
         -   #### 4. Questions
             -   Div of Question Components - Accordion dropdown answer
         -   #### 5. Menu
+            -   Make a food menu with dynamic tabs based on the 'category' property of each food item
+            -   no hard-coded categories
+            -   category buttons allow user to filter menu by "breakfast" or "lunch" etc.
         -   #### 6. Tabs
+            -   button tabs return a different object from array based on index
+            -   using the index means we don't have to mutate the array or call the API again
         -   #### 7. Slider
+            -   Photo carousel using useEffect Hook and dynamic classNames
 
     -   #### Forms
 
         -   #### 8. Lorem Ipsum Generator
         -   #### 9. Color Shades Generator
         -   #### 10. Grocery Bud
+            -   Todo App
 
     -   #### useRef
 
