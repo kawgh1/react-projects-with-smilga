@@ -2,9 +2,18 @@ import React, { useState, useEffect } from "react";
 import List from "./List";
 import Alert from "./Alert";
 
+const getLocalStorage = () => {
+    let list = localStorage.getItem("list");
+    if (list) {
+        return JSON.parse(localStorage.getItem("list"));
+    }
+    return [];
+};
+
 function App() {
     const [itemToAdd, setItemToAdd] = useState(""); // name of todo
-    const [list, setList] = useState([]);
+    // const [list, setList] = useState([]); // no local storage
+    const [list, setList] = useState(getLocalStorage());
     const [isEditing, setIsEditing] = useState(false);
     const [editId, setEditId] = useState(null);
     const [alert, setAlert] = useState({
@@ -76,6 +85,11 @@ function App() {
         // grab list item and pass text into the main input field to edit text
         setItemToAdd(itemToEdit.title);
     };
+
+    // update list in Local Storage
+    useEffect(() => {
+        localStorage.setItem("list", JSON.stringify(list));
+    }, [list]);
 
     return (
         <section className="section-center">
