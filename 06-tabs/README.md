@@ -1,3 +1,35 @@
 #### IN ACTION
 
+-   get jobs data from API
+-   display different job by tab
+
+        // notice to change the job display, we're just changing the value of 'value'
+        // we don't touch the jobs array, we just change the index we're calling from it
+        // this is elegantly simple - no new API calls for data,  no setting or resetting data objects or arrays
+
+        File: App.js
+        ...
+        const [value, setValue] = useState(0);
+        ...
+        ...
+        return(
+
+         {/* btn container */}
+                <div className="btn-container">
+                    {jobs.map((item, index) => {
+                        return (
+                            <button
+                                key={item.id}
+                                onClick={() => setValue(index)}
+                            >
+                                {item.company}
+                            </button>
+                        );
+                    })}
+                </div>
+        ...
+        );
+
+![tabs.png](https://raw.githubusercontent.com/kawgh1/react-projects-with-smilga/main/06-tabs/tabs.png)
+
 [Portfolio](https://gatsby-strapi-portfolio-project.netlify.app/)
