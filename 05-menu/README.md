@@ -1,5 +1,7 @@
 # react-projects-5-menu
 
+![menu.png](https://raw.githubusercontent.com/kawgh1/react-projects-with-smilga/main/05-menu/menu.png)
+
 [https://react-projects-5-menu.netlify.app/](https://react-projects-5-menu.netlify.app/)
 
 -   Great example of dynamically creating categories based solely on items taken from API/data

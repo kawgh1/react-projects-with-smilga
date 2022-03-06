@@ -1,5 +1,7 @@
 ## React Projects Starter APP
 
+![tours.png](https://raw.githubusercontent.com/kawgh1/react-projects-with-smilga/main/02-tours/tours.png)
+
 -   pulls an array of travel tours from an API and display them as Component Cards
 -   [https://react-projects-2-tours.netlify.app/](https://react-projects-2-tours.netlify.app/)
 
