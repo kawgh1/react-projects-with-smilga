@@ -1,5 +1,7 @@
 #### IN ACTION
 
+[https://react-projects-6-tabs.netlify.app/](https://react-projects-6-tabs.netlify.app/)
+
 -   get jobs data from API
 -   display different job by tab
 
@@ -10,7 +12,14 @@
         File: App.js
         ...
         const [value, setValue] = useState(0);
+        const [jobs, setJobs] = useState([]);
         ...
+        ...
+        // call API, get jobs, setJobs, handle loading
+        ...
+        ...
+        // default value = 0, so it will show first job
+        const { company, dates, duties, title } = jobs[value];
         ...
         return(
 
@@ -20,7 +29,12 @@
                         return (
                             <button
                                 key={item.id}
+
                                 onClick={() => setValue(index)}
+
+                                className={`job-btn ${
+                                    index === value && "active-btn"
+                                }`}
                             >
                                 {item.company}
                             </button>
@@ -29,6 +43,8 @@
                 </div>
         ...
         );
+
+-   notice above too how we used template strings, index from map() and value from state to apply conditional rendering -> highlighting the active tab
 
 ![tabs.png](https://raw.githubusercontent.com/kawgh1/react-projects-with-smilga/main/06-tabs/tabs.png)
 
