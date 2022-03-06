@@ -1,26 +1,24 @@
 import React from "react";
+import { FiChevronRight, FiChevronLeft } from "react-icons/fi";
+import { FaQuoteRight } from "react-icons/fa";
 
-const Person = ({ person, handlePrev, handleNext }) => {
+const Person = ({ person, position, handlePrev, handleNext }) => {
     return (
-        <div className="card" key={person.id}>
-            <div>
-                <img
-                    src={person.image}
-                    alt={person.name}
-                    className="person-img"
-                />
-                <div
-                    className="btn-container"
-                    style={{ display: "flex", justifyContent: "space-between" }}
-                >
-                    <button onClick={handlePrev}>Left</button>
-                    <button onClick={handleNext}>Right</button>
-                </div>
-                <h1>{person.name}</h1>
-                <h3>{person.title}</h3>
-                <p>{person.quote}</p>
+        <article className={position} key={person.id}>
+            <img src={person.image} alt={person.name} className="person-img" />
+            <div className="btn-container">
+                <button className="prev" onClick={handlePrev}>
+                    <FiChevronLeft />
+                </button>
+                <button className="next" onClick={handleNext}>
+                    <FiChevronRight />
+                </button>
             </div>
-        </div>
+            <h4>{person.name}</h4>
+            <p className="title">{person.title}</p>
+            <p className="text">{person.quote}</p>
+            <FaQuoteRight className="icon" />
+        </article>
     );
 };
 

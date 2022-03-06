@@ -1,6 +1,4 @@
 import React, { useState, useEffect } from "react";
-import { FiChevronRight, FiChevronLeft } from "react-icons/fi";
-import { FaQuoteRight } from "react-icons/fa";
 import people from "./data";
 import Person from "./Person";
 function App() {
@@ -10,6 +8,7 @@ function App() {
 
     // console.log(data);
 
+    // static buttons - slider only changes on click
     const handleNext = () => {
         if (value === data.length - 1) {
             setValue(0);
@@ -26,25 +25,60 @@ function App() {
         setValue(value - 1);
     };
 
-    return (
-        <main className="section-center">
-            <header>
-                <h1>slider</h1>
-            </header>
+    // automatic slider - changes every 5 seconds using useEffect and setInterval
+    useEffect(() => {
+        const lastValue = data.length - 1;
+        if (value < 0) {
+            setValue(lastValue);
+        }
+        if (value > lastValue) {
+            setValue(0);
+        }
+    }, [value, data]);
 
-            <div>
-                {data
-                    .filter((person) => person.id === value)
-                    .map((person) => (
-                        <Person
-                            key={person.id}
-                            person={person}
-                            handleNext={handleNext}
-                            handlePrev={handlePrev}
-                        />
-                    ))}
+    useEffect(() => {
+        let slider = setInterval(() => {
+            setValue(value + 1);
+        }, 5000);
+        return () => {
+            clearInterval(slider);
+        };
+    }, [value]);
+
+    return (
+        <section className="section">
+            <div className="title">
+                <h2>
+                    <span>/</span>reviews
+                </h2>
             </div>
-        </main>
+            <div className="section-center">
+                {data.map((person, personIndex) => {
+                    let position = "nextSlide";
+                    if (personIndex === value) {
+                        position = "activeSlide";
+                    }
+                    if (
+                        personIndex === value - 1 ||
+                        (value === 0 && personIndex === data.length - 1)
+                    ) {
+                        position = "lastSlide";
+                    }
+
+                    return (
+                        <article className={position}>
+                            <Person
+                                className={position}
+                                key={person.id}
+                                person={person}
+                                handleNext={handleNext}
+                                handlePrev={handlePrev}
+                            />
+                        </article>
+                    );
+                })}
+            </div>
+        </section>
     );
 }
 
