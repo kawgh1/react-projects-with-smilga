@@ -1,4 +1,6 @@
-# didn't bother with this one
+# Forms practice
+
+https://react-projects-8-lorem-ipsum-generator.netlify.app/
 
 just use this https://hipsum.co/
 
