@@ -44,7 +44,9 @@
     -   #### Forms
 
         -   #### 8. Lorem Ipsum Generator
+            -   Form takes a number, returns that many paragraphs of random text
         -   #### 9. Color Shades Generator
+            -   Form takes a hex value or color and generates a color palette
         -   #### 10. Grocery Bud
             -   Todo App
 
