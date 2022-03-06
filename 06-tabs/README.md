@@ -2,6 +2,8 @@
 
 [https://react-projects-6-tabs.netlify.app/](https://react-projects-6-tabs.netlify.app/)
 
+![tabs-2.png](https://raw.githubusercontent.com/kawgh1/react-projects-with-smilga/main/06-tabs/tabs-2.png)
+
 -   get jobs data from API
 -   display different job by tab
 
