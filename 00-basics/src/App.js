@@ -4,6 +4,8 @@ import MultipleInputsForm from "./components/MultipleInputsForm";
 import PropDrilling from "./components/PropDrilling";
 import UseReducer from "./components/UseReducer";
 import UseRef from "./components/UseRef";
+import ContextAPI from "./components/ContextAPI";
+import CustomHookUseFetch from "./components/CustomHookUseFetch";
 
 function App() {
     return (
@@ -12,7 +14,9 @@ function App() {
             {/* <MultipleInputsForm /> */}
             {/* <UseRef /> */}
             {/* <UseReducer /> */}
-            <PropDrilling />
+            {/* <PropDrilling /> */}
+            {/* <ContextAPI /> */}
+            <CustomHookUseFetch />
         </div>
     );
 }
