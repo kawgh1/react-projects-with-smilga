@@ -1,9 +1,10 @@
 # React Basics in the Components folder
 
-## Topics
+-   ## Topics
 
-### Basic React Form
+-   ### Basic React Form
 
-### Multiple Input React Form
+-   ### Multiple Input React Form
 
-### useRef
+-   ### useRef
+    -   to manipulate the objects in the DOM, like an input field or a div
