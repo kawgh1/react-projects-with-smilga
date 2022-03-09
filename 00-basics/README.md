@@ -26,4 +26,8 @@
     -   Example of Prop Drilling
 
 -   ### UseContextAPI
+
     -   Example of using useContext to fix Prop Drilling
+
+-   ### Custom Hook
+    -   Example of taking a generic API call to get product data and refactoring it into a "useFetch" custom hook
