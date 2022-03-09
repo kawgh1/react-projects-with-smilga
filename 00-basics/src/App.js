@@ -6,6 +6,7 @@ import UseReducer from "./components/UseReducer";
 import UseRef from "./components/UseRef";
 import ContextAPI from "./components/ContextAPI";
 import CustomHookUseFetch from "./components/CustomHookUseFetch";
+import PropTypesExample from "./components/PropTypesExample";
 
 function App() {
     return (
@@ -16,7 +17,8 @@ function App() {
             {/* <UseReducer /> */}
             {/* <PropDrilling /> */}
             {/* <ContextAPI /> */}
-            <CustomHookUseFetch />
+            {/* <CustomHookUseFetch /> */}
+            <PropTypesExample />
         </div>
     );
 }

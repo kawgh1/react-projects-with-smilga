@@ -30,4 +30,34 @@
     -   Example of using useContext to fix Prop Drilling
 
 -   ### Custom Hook
+
     -   Example of taking a generic API call to get product data and refactoring it into a "useFetch" custom hook
+
+-   ### Prop Types
+
+    -   Example of using Prop Types to guard against missing data properties in API results
+    -   use .shape() for checking Prop Types on nested objects
+
+            // Product Prop Types
+            propTypes: {
+                data: PropTypes.shape({
+                id: PropTypes.number.isRequired,
+                title: PropTypes.string
+            })
+
+    -   and to check for properties in arrays inside objects
+
+        -   https://www.codegrepper.com/code-examples/whatever/proptypes+array+of+objects
+
+            // Product Prop Types
+            Product.propTypes = {
+            fields: PropTypes.shape({
+            image: PropTypes.arrayOf(
+            PropTypes.shape({
+            url: PropTypes.string.isRequired
+            })
+            ),
+            name: PropTypes.string.isRequired,
+            price: PropTypes.number.isRequired,
+            }),
+            };
