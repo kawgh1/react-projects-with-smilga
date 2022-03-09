@@ -1,5 +1,8 @@
 # React Basics in the Components folder
 
+-   John Smilga APIs for examples
+-   https://course-api.com/
+
 -   ## Topics
 
 -   ### Basic React Form
@@ -17,3 +20,14 @@
         -   It is not necessary in simple or even compound components generally
 
     -   it is useful when you do NOT want a Component State to be updated willy nilly, but only when certain conditions are met - it will go through the reducer first to check, before updating State
+
+-   ### Prop Drilling
+
+    -   Example of Prop Drilling
+
+-   ### UseContextAPI
+
+    -   Example of using useContext to fix Prop Drilling
+
+-   ### Custom Hook
+    -   Example of taking a generic API call to get product data and refactoring it into a "useFetch" custom hook
