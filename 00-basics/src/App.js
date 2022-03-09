@@ -1,6 +1,7 @@
 import "./App.css";
 import BasicForm from "./components/BasicForm";
 import MultipleInputsForm from "./components/MultipleInputsForm";
+import UseReducer from "./components/UseReducer";
 import UseRef from "./components/UseRef";
 
 function App() {
@@ -8,7 +9,8 @@ function App() {
         <div className="App">
             {/* <BasicForm /> */}
             {/* <MultipleInputsForm /> */}
-            <UseRef />
+            {/* <UseRef /> */}
+            <UseReducer />
         </div>
     );
 }
